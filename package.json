@@ -1,0 +1,24 @@
+{
+  "name": "jsx-to-suitescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/suitescript-plugin.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Davies",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/generator": "^7.20.14",
+    "@babel/parser": "^7.20.15",
+    "@babel/traverse": "^7.20.13",
+    "@babel/types": "^7.20.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.5"
+  }
+}
