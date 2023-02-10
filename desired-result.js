@@ -3,12 +3,12 @@ const qtyDistForm = ui.createForm({
 });
 qtyDistForm.clientScriptFileId = 17164;
 qtyDistForm.addFieldGroup({
-  id: "custpage_main_fgroup",
+  id: "custpage_main_fieldgroup",
   label: "Main",
 });
 const overrideBox = qtyDistForm.addField({
   id: "custpage_qty_dist_override_box",
-  label: "override?",
+  label: "Override Box",
   type: "checkbox",
   container: "custpage_header_fieldgroup",
 });
@@ -129,3 +129,27 @@ if (overrideBox === "T") {
 context.response.writePage({
   pageObject: qtyDistForm,
 });
+
+// search API call:
+// will need to traverse the AST to detect how many AND Which JSXElements have a value attrtibute.
+// For every field in a Sublist we call .setSublistValue()
+// for every field in a Form we call .setField()
+`let i = 0;
+search
+  .create(${{
+    type: "item",
+    filters: [["internalid", "anyof", itemIds]],
+    columns: [column1, column2],
+  }})
+  .run()
+  .each((result) => {
+    ${sublist}.setSublistValue({
+      id: "${fieldId}",
+      line: i,
+      value: result.getValue({
+        name: "${column1}",
+      }),
+    });
+    i++;
+    return true;
+  });`;
