@@ -211,7 +211,7 @@ const Button = {
 };
 
 // creates the Page, whether thats a Form, List or Assistant
-const write = (res: object, form: object) => `
+const Write = (res: object, form: object) => `
     ${res}.writePage({
     pageObject: ${form}
     })  

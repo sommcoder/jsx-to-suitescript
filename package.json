@@ -1,7 +1,7 @@
 {
   "name": "jsx-to-suitescript",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Turn JSX into SuiteScript API calls",
   "main": "./lib/suitescript-plugin.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,6 @@
   "author": "Brian Davies",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.20.7",
     "@babel/generator": "^7.20.14",
     "@babel/parser": "^7.20.15",
     "@babel/traverse": "^7.20.13",
